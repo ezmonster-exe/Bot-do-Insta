@@ -13,8 +13,8 @@ class Localizador:
     def loginAccounts(self):
         self.driver.get(self.urlogin)
         time.sleep(1)
-        self.driver.find_element_by_xpath('//*[@id="loginForm"]/div/div[1]/div/label/input').send_keys('lucasoleoncio807@gmail.com')
-        self.driver.find_element_by_xpath('//*[@id="loginForm"]/div/div[2]/div/label/input').send_keys('allox2020')
+        self.driver.find_element_by_xpath('//*[@id="loginForm"]/div/div[1]/div/label/input').send_keys('seu email')
+        self.driver.find_element_by_xpath('//*[@id="loginForm"]/div/div[2]/div/label/input').send_keys('sua senha')
         time.sleep(1)
         n1 = self.driver.find_element_by_xpath('//*[@id="loginForm"]/div/div[3]/button/div')
         n1.click()

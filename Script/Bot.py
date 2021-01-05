@@ -41,7 +41,7 @@ class Localizador:
                     nx.click()          
                 break    
             except:
-                k2 = [item for item in self.driver.find_elements_by_class_name('aOOlW') if item.get_attribute('innerHTML') == 'OK'][0]
+                # k2 = [item for item in self.driver.find_elements_by_class_name('aOOlW') if item.get_attribute('innerHTML') == 'OK'][0]
                 # for item in self.driver.find_elements_by_class_name('aOOlW'):
                 #     if item.get_attribute('innerHTML') == 'OK':
                 #         item.click()
@@ -171,7 +171,7 @@ class Localizador:
                 break
             except:
                 time.sleep(2)
-                k2 = [item for item in self.driver.find_elements_by_class_name('aOOlW') if item.get_attribute('innerHTML') == 'OK'][0]
+                k3 = [item for item in self.driver.find_elements_by_class_name('aOOlW') if item.get_attribute('innerHTML') == 'OK'][0]
 
                 # for item in self.driver.find_elements_by_class_name('aOOlW'):
                 #     if item.get_attribute('innerHTML') == 'OK':

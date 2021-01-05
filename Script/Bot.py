@@ -13,8 +13,8 @@ class Localizador:
     def loginAccounts(self):
         self.driver.get(self.urlogin)
         time.sleep(1)
-        self.driver.find_element_by_xpath('//*[@id="loginForm"]/div/div[1]/div/label/input').send_keys('seu email')
-        self.driver.find_element_by_xpath('//*[@id="loginForm"]/div/div[2]/div/label/input').send_keys('sua senha')
+        self.driver.find_element_by_xpath('//*[@id="loginForm"]/div/div[1]/div/label/input').send_keys('lucasoleoncio807@gmail.com')
+        self.driver.find_element_by_xpath('//*[@id="loginForm"]/div/div[2]/div/label/input').send_keys('allox2020')
         time.sleep(1)
         n1 = self.driver.find_element_by_xpath('//*[@id="loginForm"]/div/div[3]/button/div')
         n1.click()
@@ -23,12 +23,41 @@ class Localizador:
         time.sleep(5)
         n2 = self.driver.find_element_by_xpath('//*[@id="react-root"]/section/main/div/div/div/section/div/button')
         n2.click()
-        time.sleep(1)
+        time.sleep(3)
         n3 = self.driver.find_element_by_xpath('/html/body/div[4]/div/div/div/div[3]/button[2]')
         n3.click()
-
-    def varclickfollow(self):
+    
+    def comits(self):
         
+        time.sleep(4)
+        self.driver.execute_script('scrollTo(0,400)')
+        time.sleep(8)
+        v1 = self.driver.find_element_by_xpath('//*[@id="react-root"]/section/main/section/div[1]/div[2]/div/article[1]/div[3]/section[1]/span[2]/button')
+        time.sleep(6)
+        v1.click()
+        time.sleep(3)
+        v2 = self.driver.find_element_by_xpath('//*[@id="react-root"]/section/main/div/div[1]/article/div[3]/section[1]/span[2]/button')
+        v2.click()
+        v3 = self.driver.find_element_by_xpath('//*[@id="react-root"]/section/main/div/div[1]/article/div[3]/section[3]/div/form/textarea')
+        time.sleep(2)
+        v3.send_keys('Uau')
+        v4 = self.driver.find_element_by_xpath('//*[@id="react-root"]/section/main/div/div[1]/article/div[3]/section[3]/div/form/button')
+        time.sleep(6)
+        v4.click()
+        time.sleep(12)
+
+    def status(self):
+        self.driver.get('https://www.instagram.com/')
+        time.sleep(10)
+        g1 = self.driver.find_element_by_xpath('//*[@id="react-root"]/section/main/section/div[1]/div[1]/div/div/div/div/ul/li[3]/div/button/div[2]')
+        time.sleep(3)
+        g1.click()
+        time.sleep(600)
+        # time.sleep(1200)
+    
+    def varclickfollow(self):
+
+        self.driver.get('https://www.instagram.com/')
         while True:
             try:
                 for i in range(1,6):
@@ -41,11 +70,6 @@ class Localizador:
                     nx.click()          
                 break    
             except:
-                # k2 = [item for item in self.driver.find_elements_by_class_name('aOOlW') if item.get_attribute('innerHTML') == 'OK'][0]
-                # for item in self.driver.find_elements_by_class_name('aOOlW'):
-                #     if item.get_attribute('innerHTML') == 'OK':
-                #         item.click()
-                
                 time.sleep(1)
                 k2 = self.driver.find_element_by_xpath('/html/body/div[5]/div/div/div/div[2]/button[2]')
                 time.sleep(2)
@@ -54,31 +78,29 @@ class Localizador:
 
     
     def likemenbers(self):
-        time.sleep(2)
+        time.sleep(5)
         self.driver.execute_script('window.scrollTo(0,800)')
+        time.sleep(2)
         h1 = self.driver.find_element_by_xpath('//*[@id="react-root"]/section/main/section/div[1]/div[3]/div/article[1]/div[3]/section[1]/span[1]/button')
         h2 = self.driver.find_element_by_xpath('//*[@id="react-root"]/section/main/section/div[1]/div[3]/div/article[2]/div[3]/section[1]/span[1]/button')
         h3 = self.driver.find_element_by_xpath('//*[@id="react-root"]/section/main/section/div[1]/div[3]/div/article[3]/div[3]/section[1]/span[1]/button')
         h4 = self.driver.find_element_by_xpath('//*[@id="react-root"]/section/main/section/div[1]/div[3]/div/article[4]/div[3]/section[1]/span[1]/button')
-        h5 = self.driver.find_element_by_xpath('//*[@id="react-root"]/section/main/section/div[1]/div[3]/div/article[5]/div[3]/section[1]/span[1]/button')
         time.sleep(1)
 
         while True:
             try:
                 h1.click()
-                self.driver.execute_script('window.scrollTo(0,800)')
-                time.sleep(2)
+                time.sleep(3)
+                self.driver.execute_script('window.scrollTo(0,1800)')
                 h2.click()
-                self.driver.execute_script('window.scrollTo(0,1600)')
-                time.sleep(5)
+                self.driver.execute_script('window.scrollTo(0,2800)')
+                time.sleep(8)
                 h3.click()
-                self.driver.execute_script('window.scrollTo(0,2400)')
-                time.sleep(2)
+                self.driver.execute_script('window.scrollTo(0,3800)')
+                time.sleep(3)
                 h4.click()
-                self.driver.execute_script('window.scrollTo(0,3200)')
-                time.sleep(5)
-                h5.click
                 self.driver.execute_script('window.scrollTo(0,4000)')
+                time.sleep(8)
                 self.driver.refresh()
                 time.sleep(3)
 
@@ -89,103 +111,51 @@ class Localizador:
                 time.sleep(2)
                 k2.click()
                   
-    def perfil(self):
-
-        while True:
-            try:
-                perfil = self.driver.find_element_by_xpath('//*[@id="react-root"]/section/nav/div[2]/div/div/div[3]/div/div[5]/span/img')
-                perfil.click()
-
-
-                time.sleep(3)
-
-                abrir = self.driver.find_element_by_xpath('//*[@id="react-root"]/section/nav/div[2]/div/div/div[3]/div/div[5]/div[2]/div[2]/div[2]/a[1]/div')
-                abrir.click()
-
-                time.sleep(5)
-
-                seguindo = self.driver.find_element_by_xpath('//*[@id="react-root"]/section/main/div/header/section/ul/li[3]/a')
-                seguindo.click()
-
-                time.sleep(2)
-
-                unfollow = self.driver.find_element_by_xpath('/html/body/div[5]/div/div/div[2]/ul/div/li[1]/div/div[3]/button')
-                unfollow.click()
-
-                time.sleep(5)
-
-                certo = self.driver.find_element_by_xpath('/html/body/div[6]/div/div/div/div[3]/button[1]')
-                certo.click()
-
-                time.sleep(2)
-
-                unfollow = self.driver.find_element_by_xpath('/html/body/div[5]/div/div/div[2]/ul/div/li[2]/div/div[3]/button')
-                unfollow.click()
-
-                time.sleep(5)
-
-                certo = self.driver.find_element_by_xpath('/html/body/div[6]/div/div/div/div[3]/button[1]')
-                certo.click()
-
-                time.sleep(2)
-
-                unfollow = self.driver.find_element_by_xpath('/html/body/div[5]/div/div/div[2]/ul/div/li[3]/div/div[3]/button')
-                unfollow.click()
-
-                time.sleep(5)
-
-                certo = self.driver.find_element_by_xpath('/html/body/div[6]/div/div/div/div[3]/button[1]')
-                certo.click()
-
-                time.sleep(2)
-
-                unfollow = self.driver.find_element_by_xpath('/html/body/div[5]/div/div/div[2]/ul/div/li[4]/div/div[3]/button')
-                unfollow.click()
-
-                time.sleep(5)
-
-                certo = self.driver.find_element_by_xpath('/html/body/div[6]/div/div/div/div[3]/button[1]')
-                certo.click()
-
-                time.sleep(2)
-
-                unfollow = self.driver.find_element_by_xpath('/html/body/div[5]/div/div/div[2]/ul/div/li[5]/div/div[3]/button')
-                unfollow.click()
-
-                time.sleep(5)
-
-                certo = self.driver.find_element_by_xpath('/html/body/div[6]/div/div/div/div[3]/button[1]')
-                certo.click()
-
-                time.sleep(2)
-
-                unfollow = self.driver.find_element_by_xpath('/html/body/div[5]/div/div/div[2]/ul/div/li[6]/div/div[3]/button')
-                unfollow.click()
-
-                time.sleep(5)
-
-                certo = self.driver.find_element_by_xpath('/html/body/div[6]/div/div/div/div[3]/button[1]')
-                certo.click()
-                time.sleep(2)
-                self.driver.refresh()
-                break
-            except:
-                time.sleep(2)
-                k3 = [item for item in self.driver.find_elements_by_class_name('aOOlW') if item.get_attribute('innerHTML') == 'OK'][0]
-
-                # for item in self.driver.find_elements_by_class_name('aOOlW'):
-                #     if item.get_attribute('innerHTML') == 'OK':
-                #         item.click()
+    def clickperf(self):
+        time.sleep(6)
+        self.driver.get('https://www.instagram.com/')
+        t1 = self.driver.find_element_by_xpath('//*[@id="react-root"]/section/nav/div[2]/div/div/div[3]/div/div[5]/span/img')
+        time.sleep(3)
+        t1.click()
+        t2 = self.driver.find_element_by_xpath('//*[@id="f149c22a8be0a14"]/div/div/div')
+        time.sleep(2)
+        t2.click()
+    
+    def unfollow(self):
+        
 
 
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+                # time.sleep(2)
+                # k4 = self.driver.find_element_by_xpath('/html/body/div[6]/div/div/div/div[2]/button[2]')
+                # time.sleep(2)
+                # k4.click()
+                # time.sleep(5)
+
+
 p = Localizador()
 p.loginAccounts()
 p.InterfaceTwo()
+p.comits()
+p.status()
 p.varclickfollow()
 p.likemenbers()
-p.perfil()
+while True:
+    p.clickperf()
 
 del p
-
-input('ok')

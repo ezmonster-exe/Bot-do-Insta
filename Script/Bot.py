@@ -13,8 +13,8 @@ class Localizador:
     def loginAccounts(self):
         self.driver.get(self.urlogin)
         time.sleep(1)
-        self.driver.find_element_by_xpath('//*[@id="loginForm"]/div/div[1]/div/label/input').send_keys('Email')
-        self.driver.find_element_by_xpath('//*[@id="loginForm"]/div/div[2]/div/label/input').send_keys('Senha')
+        self.driver.find_element_by_xpath('//*[@id="loginForm"]/div/div[1]/div/label/input').send_keys('SEU EMAIL')
+        self.driver.find_element_by_xpath('//*[@id="loginForm"]/div/div[2]/div/label/input').send_keys('SUA SENHA')
         time.sleep(1)
         n1 = self.driver.find_element_by_xpath('//*[@id="loginForm"]/div/div[3]/button/div')
         n1.click()
@@ -110,42 +110,69 @@ class Localizador:
                 k2 = self.driver.find_element_by_xpath('/html/body/div[5]/div/div/div/div[2]/button[2]')
                 time.sleep(2)
                 k2.click()
-                  
-    def clickperf(self):
-        time.sleep(6)
-        self.driver.get('https://www.instagram.com/')
-        t1 = self.driver.find_element_by_xpath('//*[@id="react-root"]/section/nav/div[2]/div/div/div[3]/div/div[5]/span/img')
-        time.sleep(3)
-        t1.click()
-        t2 = self.driver.find_element_by_xpath('//*[@id="f149c22a8be0a14"]/div/div/div')
-        time.sleep(2)
-        t2.click()
     
     def unfollow(self):
-        
+        while True:
+            time.sleep(6)
+            self.driver.get('https://www.instagram.com/')
+            t1 = self.driver.find_element_by_xpath('//*[@id="react-root"]/section/nav/div[2]/div/div/div[3]/div/div[5]/span/img')
+            time.sleep(3)
+            t1.click()
+            time.sleep(6)
+            t2 = self.driver.find_element_by_xpath('//*[@id="react-root"]/section/nav/div[2]/div/div/div[3]/div/div[5]/div[2]/div[2]/div[2]/a[1]/div')
+            time.sleep(2)
+            t2.click()
 
+            time.sleep(5)
+            t3 = self.driver.find_element_by_xpath('//*[@id="react-root"]/section/main/div/header/section/ul/li[3]/a')
+            time.sleep(2)
+            t3.click()
+            time.sleep(6)
+            t4 = self.driver.find_element_by_xpath('/html/body/div[5]/div/div/div[2]/ul/div/li[1]/div/div[3]/button')
+            t5 = self.driver.find_element_by_xpath('/html/body/div[5]/div/div/div[2]/ul/div/li[2]/div/div[3]/button')
+            t6 = self.driver.find_element_by_xpath('/html/body/div[5]/div/div/div[2]/ul/div/li[3]/div/div[3]/button')
+            t7 = self.driver.find_element_by_xpath('/html/body/div[5]/div/div/div[2]/ul/div/li[4]/div/div[3]/button')
+            t8 = self.driver.find_element_by_xpath('/html/body/div[5]/div/div/div[2]/ul/div/li[5]/div/div[3]/button')
+            d1 = self.driver.find_element_by_xpath('/html/body/div[5]/div/div/div[2]/ul/div/li[6]/div/div[3]/button')
+            d2 = self.driver.find_element_by_xpath('/html/body/div[5]/div/div/div[2]/ul/div/li[7]/div/div[3]/button')
+            
+            time.sleep(6)
+            t4.click()
+            time.sleep(3)
+            t9 = self.driver.find_element_by_xpath('/html/body/div[6]/div/div/div/div[3]/button[1]')
+            t9.click()
+            time.sleep(6)
+            t5.click()
+            time.sleep(3)
+            t9 = self.driver.find_element_by_xpath('/html/body/div[6]/div/div/div/div[3]/button[1]')
+            t9.click()
+            time.sleep(6)
+            t6.click()
+            time.sleep(3)
+            t9 = self.driver.find_element_by_xpath('/html/body/div[6]/div/div/div/div[3]/button[1]')
+            t9.click()
+            time.sleep(6)
+            t7.click()
+            time.sleep(3)
+            t9 = self.driver.find_element_by_xpath('/html/body/div[6]/div/div/div/div[3]/button[1]')
+            t9.click()
+            time.sleep(6)
+            t8.click() 
+            time.sleep(3)
+            t9 = self.driver.find_element_by_xpath('/html/body/div[6]/div/div/div/div[3]/button[1]')
+            t9.click()
+            time.sleep(6)
+            d1.click()
+            time.sleep(3)
+            t9 = self.driver.find_element_by_xpath('/html/body/div[6]/div/div/div/div[3]/button[1]')
+            t9.click()
+            time.sleep(6)
+            d2.click()
+            time.sleep(3)
+            t9 = self.driver.find_element_by_xpath('/html/body/div[6]/div/div/div/div[3]/button[1]')
+            t9.click
+            time.sleep(3)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-                # time.sleep(2)
-                # k4 = self.driver.find_element_by_xpath('/html/body/div[6]/div/div/div/div[2]/button[2]')
-                # time.sleep(2)
-                # k4.click()
-                # time.sleep(5)
 
 
 p = Localizador()
@@ -155,7 +182,5 @@ p.comits()
 p.status()
 p.varclickfollow()
 p.likemenbers()
-while True:
-    p.clickperf()
-
+p.unfollow()
 del p
